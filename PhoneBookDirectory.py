@@ -27,7 +27,7 @@ def bub_sort():
  #FUNCTION TO SAVE THE NEWLY ADDED SUBSCRIBERS TO THE DIRECTORY
 
 def SaveDataToFile(dirList):
-  f=open("Phone_Directory.txt"."w")
+  f=open("Phone_Directory.txt","w")
   for n in dirList:
     f.write(n[0])
     f.write(" ")
@@ -40,7 +40,7 @@ def SaveDataToFile(dirList):
 def Display():
   if(os.path.isfile('Phone_Directory.txt')==0):
     print("Sorry you dont have any contacts in your phone address book")
-    print("Please create it!!!)
+    print("Please create it!!!")
   elif(os.stat('Phone_Directory.txt').st_size==0):
     print("address book is empty")
   else:
@@ -70,7 +70,7 @@ def Search():
 # FUNCTION TO GET SUBSCRIBER FROM THE USER.THE REQUESTED CHOICE IS RETURNED TO THE MAIN PART IF THE PROGRAM TO PERFORM A PARTICULAR TASK.
   
 def get_choice():
-  print("1)\tAdd new phone number to a list of phone book directory:")no
+  print("1)\tAdd new phone number to a list of phone book directory:")
   print("2)\tSort name in ascending order")
   print("3)\tSave all the phone numbers to file")        
   print("4)\tPrint all phone book directory on the console")
@@ -83,11 +83,11 @@ def get_choice():
           
 if(os.path.isfile("Phone_Directory.txt")==0):
   print("Sorry you dont have any contacts in your phone book")
-  print("Please create it!!!)
+  print("Please create it!!!")
   directory=[]
 else:
   print("Already your phone book have some numbers")         
-  print("you can see it!!!)              
+  print("you can see it!!!")              
   directory=[]              
   f=open("Phone_Directory.txt","r")              
   for line in f:
